@@ -1,0 +1,12 @@
+def pyramid_scheme(limit, count=1):
+    print(" " * (limit - count), end="  ")
+    print(" *" * count)
+    if count < limit:
+        count += 1
+        pyramid_scheme(limit, count)
+    else:
+        return
+
+limit = int(input("How many base stars? "))
+pyramid_scheme(limit)
+print(f"Done pyramid with {limit} * base")
